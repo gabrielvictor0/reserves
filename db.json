@@ -8,10 +8,19 @@
     }
   },
   "tables": {
-    "5b80dd03-2995-4989-be82-3e9d000db464": {
-      "capacity": 2,
-      "status": "Ativa"
+    "f96461a0-c5d7-4876-a3b8-8b323cadbfc9": {
+      "id": "f96461a0-c5d7-4876-a3b8-8b323cadbfc9",
+      "capacity": 5,
+      "status": "Ativo"
     }
   },
-  "reserves": {}
+  "reserves": {
+    "06adbf2d-2404-4126-b714-ffad39f3f05b": {
+      "id": "06adbf2d-2404-4126-b714-ffad39f3f05b",
+      "date": "2026-02-13",
+      "status": "Ativo",
+      "id_table": "f96461a0-c5d7-4876-a3b8-8b323cadbfc9",
+      "id_user": "ad0e74ed-36cc-451a-8268-111dc5d4505c"
+    }
+  }
 }

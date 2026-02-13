@@ -8,15 +8,15 @@ from fastapi.security import OAuth2PasswordBearer
 
 router = APIRouter(prefix="/reserve", tags=['Reserve'])
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 @router.post("/reserve")
-def register_reserve(reserve: ReserveViewModel, token: Annotated[str, Depends(oauth2_scheme)]):
+def register_reserve(reserve_view_model: ReserveViewModel, token: Annotated[str, Depends(oauth2_scheme)]):
     database = read_db()
 
-    new_reserve_model = wrapper_reserve_model(reserve)
+    reserve_model = wrapper_reserve_model(reserve_view_model)
 
-    database["reserves"].append(new_reserve_model.model_dump())
+    database["reserves"][reserve_model.id] = reserve_model.model_dump()
 
     write_db(database)
 

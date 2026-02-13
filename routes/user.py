@@ -21,12 +21,7 @@ def register_user(user_view_model: UserViewModel):
 
     user_model = wrapper_user_model(user_view_model)
 
-    database["users"][user_model.email] = {
-        "id": user_model.id, 
-        "email" : user_model.email,
-        "name": user_model.name,
-        "password": user_model.password
-    }
+    database["users"][user_model.email] = user_model.model_dump()
 
     write_db(database)
 

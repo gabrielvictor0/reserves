@@ -12,10 +12,7 @@ def register_table(table_view_model: TableViewModel):
 
     table_model = wrapper_table_model(table_view_model)    
 
-    database["tables"][table_model.id] = {
-        "capacity" : table_model.capacity, 
-        "status" : table_model.status
-    }
+    database["tables"][table_model.id] = table_model.model_dump()
 
     write_db(database)
 
