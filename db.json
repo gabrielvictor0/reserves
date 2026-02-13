@@ -1,0 +1,17 @@
+{
+  "users": {
+    "gabriel@pcbr.com.br": {
+      "id": "ad0e74ed-36cc-451a-8268-111dc5d4505c",
+      "email": "gabriel@pcbr.com.br",
+      "name": "Gabriel Victor",
+      "password": "$argon2id$v=19$m=65536,t=3,p=4$5C8o49p5gPC/XkJ6IxXgjQ$4X1+UpILl1h/JMSHIo6+ttPy8+BXsPVlUCo5jyFwEMc"
+    }
+  },
+  "tables": {
+    "5b80dd03-2995-4989-be82-3e9d000db464": {
+      "capacity": 2,
+      "status": "Ativa"
+    }
+  },
+  "reserves": {}
+}
